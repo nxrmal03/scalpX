@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-surface text-slate-100 font-sans antialiased;
+    scrollbar-width: thin;
+    scrollbar-color: #1e2d4a #0a0e1a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track { background: #0a0e1a; }
+  ::-webkit-scrollbar-thumb { background: #1e2d4a; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2a4080; }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-xl transition-all duration-200;
+  }
+  .card:hover {
+    @apply border-[#2a4080] bg-surface-hover;
+  }
+
+  .section-title {
+    @apply text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3 flex items-center gap-2;
+  }
+
+  .badge-bull {
+    @apply bg-bull-dim text-bull text-xs font-bold px-2 py-0.5 rounded;
+  }
+  .badge-bear {
+    @apply bg-bear-dim text-bear text-xs font-bold px-2 py-0.5 rounded;
+  }
+  .badge-neutral {
+    @apply bg-slate-800 text-slate-400 text-xs font-bold px-2 py-0.5 rounded;
+  }
+}
