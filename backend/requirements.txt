@@ -1,5 +1,4 @@
-# Pinned to versions with pre-built wheels for Python 3.13 on Windows.
-# pydantic 2.7.x required Rust to build pydantic-core on Py3.13 — 2.9+ ships ready-made .whl files.
+# Pinned for Python 3.11 compatibility on Render
 fastapi==0.115.12
 uvicorn[standard]==0.34.0
 yfinance==0.2.40
@@ -8,3 +7,4 @@ python-dotenv==1.0.1
 cachetools==5.3.3
 pydantic==2.10.4
 httpx==0.28.1
+requests==2.32.3
